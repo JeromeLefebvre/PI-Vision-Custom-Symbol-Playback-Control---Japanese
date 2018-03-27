@@ -1,0 +1,24 @@
+<!--
+	Copyright 2016 OSIsoft, LLC.
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+			
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<div class="c-pane-header t-pane-header-color t-content-font-large t-font-color-white flex-none">再生</div>  
+<label title="何かい実行する">実行回数</label>          <input type="text" ng-model="options.numberOfIncrements" ng-disabled="isRunning"></input>  
+<label title="実行する時に何秒を前に進む（一秒以下も対応）">時間間隔(s):</label> 			 <input type="text" ng-model="options.increaseIncrementTime" ng-disabled="isRunning"></input>  
+<label title="次の実行するまでに何ミリ秒の待つ時間">再生のスピード(ms):</label> <input type="text" ng-model="options.incrementTimer" ng-disabled="isRunning"></input>  
+<label title="開始時間を変更したくない場合">固定の開始時間:</label>     <input type="checkbox" ng-model="options.fixedStart"></input>
+<button ng-click="start()" ng-disabled="isRunning">Go</button>   
+<button ng-click="stop()" ng-disabled="!isRunning">Stop</button>
+
